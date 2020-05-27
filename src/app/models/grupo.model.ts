@@ -1,4 +1,4 @@
-export class Grupo{
+export class Grupo{ 
     constructor(
     public cod:number, 
     public descricao:string
