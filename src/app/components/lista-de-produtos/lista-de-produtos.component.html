@@ -1,0 +1,59 @@
+<title>List de produtos</title>
+<link href="lista-de-produtos.component.css" rel="stylesheet" />
+
+<div id="container">
+  <header>
+    <img id="petmania" src="../../../assets/imgs/twitter_header_photo_1.png" />
+    <nav>
+      <ul>
+        <li><a [routerLink]="['/home']">Home</a></li>
+
+        <li>
+          <a [routerLink]="['/novo-produto']">Novo Produto</a>
+        </li>
+
+        <li>
+          <a [routerLink]="['/lista-de-produtos']">Lista de produtos</a>
+        </li>
+
+        <li><a [routerLink]="['/contatos']">Contatos</a></li>
+
+        <li><a [routerLink]="['/sobre']">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="items">
+    <h4>Lista de produtos já adicionados</h4>
+    <div class="table1">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Preço</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Registro Anvisa</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tran of lista">
+            <td>{{tran?.cod}}</td>
+            <td>{{tran?.categoria}}</td>
+            <td>{{tran?.descricao}}</td>
+            <td>{{tran?.preco}}</td>
+            <td>{{tran?.qtd}}</td>
+            <td>{{tran?.regAnvisa}}</td>
+            <td> 
+              <img class="icon" src="../../../assets/imgs/icon-lapis.png" [routerLink]="['/editar-produto']"
+              [queryParams]="{propertyName: tran.cod}" />
+              <img class="icon" src="../../../assets/imgs/icon-lixeira.png" (click)="deleteLista(tran)"/>
+              
+          </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

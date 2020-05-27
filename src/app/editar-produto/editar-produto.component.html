@@ -1,0 +1,34 @@
+<header>
+    <img id="petmania" src="../../../assets/imgs/twitter_header_photo_1.png" />
+    <nav>
+      <ul>
+        <li><a [routerLink]="['/home']">Home</a></li>
+
+        <li>
+          <a [routerLink]="['/novo-produto']">Novo Produto</a>
+        </li>
+
+        <li>
+          <a [routerLink]="['/lista-de-produtos']">Lista de produtos</a>
+        </li>
+
+        <li><a [routerLink]="['/contatos']">Contatos</a></li>
+
+        <li><a [routerLink]="['/sobre']">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<div id="formulario">
+    <form [formGroup]="formProduto" (submit)="enviar()">
+      <label class="big">Novo produto:</label>
+      <input class="big" type="number" formControlName="cod" [value] ="prod.cod" [(ngModel)]="prod.cod" placeholder="Digite o Código" />
+      <input class="big" type="text" formControlName="descricao" [value] ="prod.descricao" [(ngModel)]="prod.descricao" placeholder="Digite a Descrição" />
+      <input class="big" type="number" formControlName="preco" [value] ="prod.preco" [(ngModel)]="prod.preco" placeholder="Digite o Preço" />
+      <input class="big" type="number" formControlName="qtd" [value] ="prod.qtd" [(ngModel)]="prod.qtd" placeholder="Digite a Quantidade" />
+      <input class="big" type="text" formControlName="categoria" [value] ="prod.categoria" [(ngModel)]="prod.categoria" placeholder="Digite a Categoria" />
+      <input class="big" type="text" formControlName="regAnvisa" [value] ="prod.regAnvisa" [(ngModel)]="prod.regAnvisa" placeholder="Digite o Registro da Anvisa" />
+      <button class="btnCadastrar" type="submit">Enviar</button>
+    </form>
+
+  </div>

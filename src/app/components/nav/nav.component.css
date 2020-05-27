@@ -1,0 +1,30 @@
+.navbar-brand {
+    margin: 0 0 0 4%;
+}
+
+.bg-green {
+    background-color: #50AF47;
+    height: 60px;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 13px;
+}
+
+.navbar-brand {
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 40px;
+    margin-left: 4%;
+}
+
+.nav {
+    position: absolute;
+    margin-left: 44px;
+}
+
+.nav-link:hover {
+    color: #606161 !important;
+    font-size: 13px;
+}

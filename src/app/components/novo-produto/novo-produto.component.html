@@ -1,0 +1,43 @@
+<title>Novo Produto</title>
+<link href="novo-produto.component.css" rel="stylesheet" />
+
+<div id="container">
+  <header>
+    <img id="petmania" src="../../../assets/imgs/twitter_header_photo_1.png" />
+    <nav>
+      <ul>
+        <li><a [routerLink]="['/home']">Home</a></li>
+
+        <li>
+          <a [routerLink]="['/novo-produto']">Novo Produto</a>
+        </li>
+
+        <li>
+          <a [routerLink]="['/lista-de-produtos']">Lista de produtos</a>
+        </li>
+
+        <li><a [routerLink]="['/contatos']">Contatos</a></li>
+
+        <li><a [routerLink]="['/sobre']">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="items">
+    <div id="formulario">
+      <form [formGroup]="formProduto" (submit)="enviar()">
+        <label class="big">Novo produto:</label>
+        <input class="big" type="number" formControlName="cod" placeholder="Digite o Código" />
+        <input class="big" type="text" formControlName="desc" placeholder="Digite a Descrição" />
+        <input class="big" type="number" formControlName="preco" placeholder="Digite o Preço" />
+        <input class="big" type="number" formControlName="qtd" placeholder="Digite a Quantidade" />
+        <input class="big" type="text" formControlName="categoria" placeholder="Digite a Categoria" />
+        <input class="big" type="text" formControlName="regAnvisa" placeholder="Digite o Registro da Anvisa" />
+        <button class="btnCadastrar" [disabled]="!formProduto.valid"type="button" (click)="enviarProduto()">Cadastrar</button>
+        <button class="btnCadastrar" type="submit">Enviar</button>
+      </form>
+
+    </div>
+    <img id="img" src="../../../assets/imgs/stay-home.png" />
+  </div>
+
+</div>

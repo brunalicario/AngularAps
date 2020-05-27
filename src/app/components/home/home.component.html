@@ -1,0 +1,43 @@
+<!-- <app-grupos (grupoClicado)="listarGrupo($event)"></app-grupos>
+<app-lista-de-produtos #lista></app-lista-de-produtos> -->
+
+<title>Home</title>
+<link href="home.component.css" rel="stylesheet" />
+
+<div id="container">
+  <header>
+      <img id="petmania" src="../../../assets/imgs/twitter_header_photo_1.png" />
+    <nav>
+      <ul>
+        <li><a [routerLink]="['/home']">Home</a></li>
+
+        <li>
+          <a [routerLink]="['/novo-produto']">Novo Produto</a>
+        </li>
+
+        <li>
+          <a [routerLink]="['/lista-de-produtos']">Lista de produtos</a>
+        </li>
+
+        <li><a [routerLink]="['/contatos']">Contatos</a></li>
+
+        <li><a  [routerLink]="['/sobre']">Sobre</a></li>
+
+      </ul>
+    </nav>
+  </header>
+  <div>
+    <div id="items">
+      <h1>Bem vindo ao petshop PetMania</h1>
+      <h2>O lugar onde seu pet é tratado como um rei</h2>
+      <h3>
+        Esse website é destinado para funcionários do estabelecimento PetMania
+      </h3>
+      <div id="imagens">
+        <img id="mainimg" src="../../../assets/imgs/pet1.jpg" />
+        <img class="show" src="../../../assets/imgs/pet2.jpg" />
+        <img class="show" src="../../../assets/imgs/pet3.png" />
+      </div>
+    </div>
+  </div>
+</div> 
