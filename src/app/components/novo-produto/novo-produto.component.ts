@@ -38,15 +38,16 @@ export class NovoProdutoComponent implements OnInit {
     this.produto.cod = this.formProduto.get('cod').value;
     this.produto.descricao = this.formProduto.get('desc').value;
     this.produto.preco = this.formProduto.get('preco').value;
-    this.produto.qtd = this.formProduto.get('preco').value;
-    this.produto.categoria = this.formProduto.get('preco').value;
+    this.produto.qtd = this.formProduto.get('qtd').value;
+    this.produto.categoria = this.formProduto.get('categoria').value;
     this.produto.regAnvisa = this.formProduto.get('regAnvisa').value;
 
     this.listProdutos.push(this.produto)
     console.log(this.listProdutos);
     
     this.produto = new Produtos();
-
+    
+    window.alert("Produto Adicionado!");
 
   }
 
